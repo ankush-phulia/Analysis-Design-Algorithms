@@ -1,4 +1,4 @@
-# Analysis and Design of Algorithms
+# Analysis & Design - Algorithms
 Projects done in COL 351 - Analysis and Design of Algorithms, 2016
 
 1. Finding the vertices that are an even distance away from source vertex
