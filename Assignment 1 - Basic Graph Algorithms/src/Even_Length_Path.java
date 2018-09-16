@@ -21,11 +21,13 @@ public class Even_Length_Path {
             int v = it.next();
             if (!visited[v]) {
                 DFSmod(graph, v, even_path, visited, !mod);
-            } else {
+            } 
+            else {
                 if (!even_path[v]) {
                     even_path[v] = !even_path[u];
                     DFSmod(graph, v, even_path, visited, !mod);
-                } else if (even_path[v] && !mod) {
+                } 
+                else if (even_path[v] && !mod) {
                     DFSmod(graph, v, even_path, visited, !mod);
                 }
             }
@@ -45,7 +47,6 @@ public class Even_Length_Path {
                 String[] adjVertices = line.split("->");
                 int vertex = getID(adjVertices[0]);
                 graph.addVertex(vertex);
-                ;
                 for (int j = 1; j < adjVertices.length; j++) {
                     graph.addEdge(vertex, getID(adjVertices[j]));
                 }

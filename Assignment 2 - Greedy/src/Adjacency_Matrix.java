@@ -27,7 +27,8 @@ public class Adjacency_Matrix {
             }
             Arrays.sort(indeg);
             return Havels(v - 1, outdeg, indeg);
-        } else {
+        } 
+        else {
             return checker(indeg) * checker(outdeg);
         }
     }

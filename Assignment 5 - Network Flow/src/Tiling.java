@@ -16,7 +16,8 @@ public class Tiling {
             if (v == t) {
                 parent[v] = s;
                 return true;
-            } else if (!visited[v]) {
+            } 
+            else if (!visited[v]) {
                 //				visited[v] = true;
                 parent[v] = s;
                 if (hasPath(visited, graph, v, t, parent)) {
@@ -74,7 +75,8 @@ public class Tiling {
                 if (!grid[i][j]) {
                     if ((i + j) % 2 == 0) {
                         cnt1++;
-                    } else {
+                    }
+                    else {
                         cnt2++;
                     }
                 }
@@ -104,7 +106,8 @@ public class Tiling {
                         if (j < n - 1 && grid[i][j + 1]) { // just right
                             adj.add(n * (i) + j + 2);
                         }
-                    } else { // to sink
+                    }
+                    else { // to sink
                         adj.add(n * n + 1);
                     }
                 }
@@ -139,7 +142,8 @@ public class Tiling {
                         out += ("(" + x + "," + y + ")" + "(" + xx + "," + yy + ")\n");
                     }
                 }
-            } else {
+            } 
+            else {
                 out = "0";
             }
             System.out.println("Time taken : " + (System.currentTimeMillis() - time));

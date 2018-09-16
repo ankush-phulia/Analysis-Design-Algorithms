@@ -39,7 +39,8 @@ public class Eggdrop {
         }
         if (k == 1) {
             return matrix[n - 1][k - 1] + 1;
-        } else {
+        } 
+        else {
             return matrix[n - 1][k - 1];
         }
     }

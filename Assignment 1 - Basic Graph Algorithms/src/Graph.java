@@ -23,7 +23,8 @@ public class Graph {
     public void addEdge(Integer v1, Integer v2) {
         if (searchVertex(v1)) {
             this.adjList.get(v1).add(v2);
-        } else {
+        } 
+        else {
             System.out.println("Vertex " + v1 + " not present in the Graph");
         }
     }

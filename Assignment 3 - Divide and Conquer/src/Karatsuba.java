@@ -36,7 +36,8 @@ public class Karatsuba {
         int lenB = b.size();
         if (lenA > lenB) {
             pad(lenA - lenB, b);
-        } else {
+        } 
+        else {
             pad(lenB - lenA, a);
         }
         ArrayList<Integer> c = new ArrayList<Integer>();
@@ -49,7 +50,8 @@ public class Karatsuba {
         c.add(0, carry);
         if (carry_in == 1) {
             c.remove(0);
-        } else if (c.get(0) == 0) {
+        } 
+        else if (c.get(0) == 0) {
             c.remove(0);
         }
         return c;
@@ -60,11 +62,13 @@ public class Karatsuba {
             ArrayList<Integer> c = new ArrayList<Integer>();
             c.add(0);
             return c;
-        } else if (n == 1) {
+        } 
+        else if (n == 1) {
             ArrayList<Integer> c = new ArrayList<Integer>();
             c.add((a.get(0)) * (b.get(0)));
             return c;
-        } else {
+        } 
+        else {
             int exp = (n - ((n + 1) / 2));
             ArrayList<Integer> al = new ArrayList<Integer>(a.subList(0, (n + 1) / 2));
             ArrayList<Integer> ar = new ArrayList<Integer>(a.subList((n + 1) / 2, n));

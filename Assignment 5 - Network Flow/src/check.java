@@ -28,9 +28,6 @@ public class check {
             String str = s.nextLine();
             if (!s.equals("") || !s.equals(" ")) {
                 String[] tile = str.split("[(),]");
-                // for (int i = 0;i<6;i++){
-                // 	System.out.println("yo" + tile[i]);
-                // }
                 grid[Integer.parseInt(tile[1]) - 1][Integer.parseInt(tile[2]) - 1]++;
                 grid[Integer.parseInt(tile[4]) - 1][Integer.parseInt(tile[5]) - 1]++;
             }

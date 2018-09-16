@@ -33,7 +33,8 @@ public class LongMultiplication {
             if (b.get(i)) {
                 c = add(a.size(), a, c);
                 a.add(false);
-            } else {
+            } 
+            else {
                 c.add(0, false);
                 a.add(false);
             }
@@ -45,7 +46,6 @@ public class LongMultiplication {
     }
 
     public static void main(String[] args) throws IOException {
-
         /*File input_file = new File("input.txt");
         Scanner s = new Scanner(input_file);
 
@@ -77,33 +77,3 @@ public class LongMultiplication {
         }
     }
 }
-
- /*ArrayList<Boolean> numA = new ArrayList<Boolean>();
- ArrayList<Boolean> numB = new ArrayList<Boolean>();
-
- for (int i = 0;i<n;i++){
-   numA.add((Character.getNumericValue(a.charAt(i)))==1);
-   numB.add(Character.getNumericValue(b.charAt(i))==1);
- }
-
- Long start = System.currentTimeMillis();
-
- ArrayList<Boolean> numC = multiply(n,numA,numB);
-
- Long end = System.currentTimeMillis();
-
- System.out.println("Time taken: " + (end - start) + "ms");
-
- String output = "";
- for (int i =0;i<numC.size();i++){
-   if (numC.get(i)){
-     output += (1);
-   }
-   else{
-     output += (0);
-   }
- }
-
- FileWriter fwrite = new FileWriter("output.txt");
- fwrite.write(output);
- fwrite.close();*/
