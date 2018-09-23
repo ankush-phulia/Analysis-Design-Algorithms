@@ -9,7 +9,6 @@ public class Tiling {
 
     static boolean hasPath(
             boolean[] visited, ArrayList<HashSet<Integer>> graph, int s, int t, int parent[]) {
-        //		int n = graph.size();
         visited[s] = true;
 
         for (int v : graph.get(s)) {
@@ -18,7 +17,6 @@ public class Tiling {
                 return true;
             } 
             else if (!visited[v]) {
-                //				visited[v] = true;
                 parent[v] = s;
                 if (hasPath(visited, graph, v, t, parent)) {
                     return true;
@@ -34,6 +32,7 @@ public class Tiling {
         int flow = 0;
         int parent[] = new int[n];
         boolean[] visited = new boolean[n];
+
         while (hasPath(visited, graph, s, t, parent)) {
             for (v = t; v != s; v = parent[v]) {
                 u = parent[v];
@@ -46,6 +45,7 @@ public class Tiling {
         for (int i = 1; i < n; i++) {
             visited[i] = false;
         }
+
         while (hasPath(visited, graph, s, t, parent)) {
             for (v = t; v != s; v = parent[v]) {
                 u = parent[v];
@@ -55,7 +55,6 @@ public class Tiling {
             }
             flow++;
         }
-
         return flow;
     }
 
@@ -68,6 +67,7 @@ public class Tiling {
         boolean[][] grid = new boolean[n][n];
         int cnt1 = 0;
         int cnt2 = 0;
+
         for (int i = 0; i < n; i++) {
             String row = s.nextLine();
             for (int j = 0; j < n; j++) {
@@ -114,13 +114,15 @@ public class Tiling {
                 graph.add(adj);
             }
         }
+
         HashSet<Integer> sink = new HashSet<Integer>();
         graph.add(sink);
         String out = "";
 
         if (cnt1 - cnt2 != 0) {
             out = "0";
-        } else {
+        } 
+        else {
             long time = System.currentTimeMillis();
             int flow = (maxFlow(graph, 0, n * n + 1));
             System.out.println(flow);
